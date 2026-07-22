@@ -8,8 +8,6 @@
 
 Com mais de uma década de experiência no ciclo de vida de desenvolvimento de software, especializei-me na construção de Sistemas Complexos que exigem alta disponibilidade e escalabilidade. Minha trajetória é marcada pela evolução técnica: do suporte crítico à arquitetura de ecossistemas robustos em nuvem (AWS/GCP), com foco em transformar regras de negócio complexas em software de alta performance. Sou movido por desafios que exigem pensamento analítico e criatividade na resolução de problemas. Procuro constantemente o equilíbrio entre a inovação técnica e a entrega de valor real ao negócio.
 
-<br>Minha atuação técnica fundamenta-se em quatro pilares:<br>
-
 🏗️ **Arquitetura de Software & Microservices:** Especialista em projetar arquiteturas distribuídas e modulares. Domino a implementação de Microsserviços que garantem independência de escala e resiliência, utilizando NestJS, .NET Core e Python. Tenho foco em comunicação assíncrona, mensageria e orquestração de fluxos críticos (como antecipação de recebíveis e monitoramento financeiro).<br><br>    
 🧩 **Design Patterns & Código Limpo:** Minha escrita de código é orientada por princípios SOLID, Clean Code e Padrões de Projeto (Gang of Four). Acredito que a complexidade de um sistema deve ser gerida com padrões arquiteturais que permitam a manutenção a longo prazo e a evolução contínua sem gerar dívida técnica.<br><br>    
 🛠️ **Quality Engineering & Test Automation:** Sou defensor da cultura de qualidade no "shift-left". Implemento estratégias rigorosas de Test Automation (E2E com Cypress, integração e unitários), garantindo que a entrega contínua (CI/CD) seja feita com segurança e previsibilidade, reduzindo drasticamente o índice de falhas em produção.<br><br>    
