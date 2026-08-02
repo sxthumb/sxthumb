@@ -4,7 +4,9 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/thiago-justo) 
 [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@articles.neoukunft) 
-[![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tjusto2409@gmail.com) 
+<a href="mailto:contato@neoukunft.com.br" target="_blank">
+  <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="email">
+</a>
 
 Atuo há mais de 10 anos no desenvolvimento de software, com experiência em todo o ciclo de vida de aplicações, desde a análise de requisitos até a arquitetura, implementação e evolução de sistemas distribuídos.
 Minha atuação é voltada à construção de sistemas escaláveis, resilientes e de alta disponibilidade, transformando regras de negócio complexas em soluções robustas. Ao longo da carreira, participei de projetos envolvendo plataformas financeiras, integrações críticas, processamento de eventos, mensageria, computação em nuvem e arquiteturas orientadas a microsserviços.
