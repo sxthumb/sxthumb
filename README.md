@@ -4,7 +4,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/thiago-justo) 
 [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@articles.neoukunft) 
-<a href="mailto:contato@neoukunft.com.br" target="_blank">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@neoukunft.com.br" target="_blank">
   <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="email">
 </a>
 
