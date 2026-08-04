@@ -52,9 +52,40 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
       <span class="font-name-lg text-section-title uppercase tracking-widest text-primary">Thiago Justo</span>
     </div>
     <nav class="hidden md:flex items-center gap-section-gap">
-      <a class="transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider" href="#perfil">Perfil</a>
-      <a class="transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider" href="#experiencia">Experiência</a>
-      <a class="transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider" href="#formacao">Formação</a>
+      <!-- Perfil (Ícone de Terminal / Prompt) -->
+      <a class="group transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider flex items-center gap-2" href="#perfil">
+        <svg class="w-4 h-4 stroke-current stroke-[2] opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="4 17 10 11 4 5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        <span>Perfil</span>
+      </a>
+
+      <!-- Experiência (Ícone de Código / Brackets) -->
+      <a class="group transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider flex items-center gap-2" href="#experiencia">
+        <svg class="w-4 h-4 stroke-current stroke-[2] opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <span>Experiência</span>
+      </a>
+
+      <!-- Formação (Ícone de Cpu / Tech) -->
+      <a class="group transition-colors text-on-surface-variant hover:text-primary font-label-tag text-label-tag uppercase tracking-wider flex items-center gap-2" href="#formacao">
+        <svg class="w-4 h-4 stroke-current stroke-[2] opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+          <rect x="9" y="9" width="6" height="6"></rect>
+          <line x1="9" y1="1" x2="9" y2="4"></line>
+          <line x1="15" y1="1" x2="15" y2="4"></line>
+          <line x1="9" y1="20" x2="9" y2="23"></line>
+          <line x1="15" y1="20" x2="15" y2="23"></line>
+          <line x1="20" y1="9" x2="23" y2="9"></line>
+          <line x1="20" y1="15" x2="23" y2="15"></line>
+          <line x1="1" y1="9" x2="4" y2="9"></line>
+          <line x1="1" y1="15" x2="4" y2="15"></line>
+        </svg>
+        <span>Formação</span>
+      </a>
     </nav>
     <button onclick="window.print()" class="flex items-center gap-2 py-2 px-4 bg-primary text-on-primary rounded font-label-tag text-label-tag hover:bg-secondary transition-colors">
       <span class="material-symbols-outlined text-[18px]">print</span>
@@ -99,11 +130,15 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 
   <div class="flex flex-col gap-3 no-print">
     <a class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-primary text-on-primary rounded font-label-tag text-label-tag hover:bg-secondary transition-colors group" href="https://www.linkedin.com/in/thiago-justo" target="_blank" rel="noopener">
-      <span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform">link</span>
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+      </svg>
       LinkedIn Profile
     </a>
     <a class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-surface-container-highest text-on-surface rounded font-label-tag text-label-tag hover:bg-outline-variant transition-colors group" href="https://github.com/sxthumb" target="_blank" rel="noopener">
-      <span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform">code</span>
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+      </svg>
       GitHub Repository
     </a>
   </div>
@@ -361,8 +396,17 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
     <div class="text-body-meta text-on-surface-variant">© 2026 Thiago Justo</div>
     <div class="flex items-center gap-gutter">
       <a href="mailto:contato@neoukunft.com.br" class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" aria-label="E-mail">mail</a>
-      <a href="https://www.linkedin.com/in/thiago-justo" target="_blank" rel="noopener" class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" aria-label="LinkedIn">link</a>
-      <a href="https://github.com/sxthumb" target="_blank" rel="noopener" class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" aria-label="GitHub">code</a>
+      <a href="https://www.linkedin.com/in/thiago-justo" target="_blank" rel="noopener" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="LinkedIn">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+      </a>
+
+      <a href="https://github.com/sxthumb" target="_blank" rel="noopener" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="GitHub">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>
