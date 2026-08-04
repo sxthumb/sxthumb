@@ -21,7 +21,7 @@
 }
 </script>
 <style>
-  @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+  @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none; overflow-x: hidden;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
   ::-webkit-scrollbar{display:none;}
   @media print {
     header, footer, .no-print { display: none !important; }
@@ -41,15 +41,15 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-background font-body-main text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="bg-background font-body-main text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
 
 <header class="no-print fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30">
-  <div class="h-16 max-w-7xl mx-auto px-margin-page flex items-center justify-between">
+  <div class="h-16 max-w-7xl mx-auto px-4 md:px-margin-page flex items-center justify-between">
     <div class="flex items-center gap-gutter">
-      <div class="w-10 h-10 rounded bg-primary flex items-center justify-center">
+      <div class="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
         <span class="material-symbols-outlined text-on-primary text-[20px]">terminal</span>
       </div>
-      <span class="font-name-lg text-section-title uppercase tracking-widest text-primary">Thiago Justo</span>
+      <span class="font-name-lg text-section-title uppercase tracking-widest text-primary truncate">Thiago Justo</span>
     </div>
     <nav class="hidden md:flex items-center gap-section-gap">
       <!-- Perfil (Ícone de Terminal / Prompt) -->
@@ -87,15 +87,15 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <span>Formação</span>
       </a>
     </nav>
-    <button onclick="window.print()" class="flex items-center gap-2 py-2 px-4 bg-primary text-on-primary rounded font-label-tag text-label-tag hover:bg-secondary transition-colors">
+    <button onclick="window.print()" class="flex items-center gap-2 py-2 px-3 sm:px-4 bg-primary text-on-primary rounded font-label-tag text-label-tag hover:bg-secondary transition-colors shrink-0">
       <span class="material-symbols-outlined text-[18px]">print</span>
       <span class="hidden sm:inline">Imprimir / Salvar PDF</span>
     </button>
   </div>
 </header>
 
-<div class="w-full pt-16 bg-background min-h-screen">
-<div class="flex flex-col w-full px-margin-page py-12 max-w-7xl mx-auto font-body-main text-on-surface">
+<div class="w-full pt-16 bg-background min-h-screen overflow-x-hidden">
+<div class="flex flex-col w-full px-4 sm:px-6 md:px-margin-page py-8 md:py-12 max-w-7xl mx-auto font-body-main text-on-surface">
 <div class="grid grid-cols-12 gap-8 relative">
 
 <!-- Sidebar -->
@@ -103,10 +103,8 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 
   <div class="flex flex-col gap-6">
     <div class="flex items-center gap-4">
-      <div class="w-16 h-16 rounded bg-primary flex items-center justify-center shrink-0 print-shadow-off">
-        <span class="font-name-lg text-role-title text-on-primary">
-            <img src="https://avatars.githubusercontent.com/u/149887468?v=4" alt="me">
-        </span>
+      <div class="w-16 h-16 rounded bg-primary flex items-center justify-center shrink-0 print-shadow-off overflow-hidden">
+        <img src="https://avatars.githubusercontent.com/u/149887468?v=4" alt="me" class="w-full h-full object-cover">
       </div>
       <div>
         <h1 class="font-name-lg text-name-lg text-primary leading-tight">Thiago Justo</h1>
@@ -120,9 +118,9 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
           <span class="material-symbols-outlined text-[18px] text-tertiary">location_on</span>
           <span>Brasil</span>
         </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-[18px] text-tertiary">mail</span>
-          <a href="mailto:contato@neoukunft.com.br" class="hover:text-primary transition-colors break-all">contato@neoukunft.com.br</a>
+        <div class="flex items-center gap-3 min-w-0">
+          <span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">mail</span>
+          <a href="mailto:contato@neoukunft.com.br" class="hover:text-primary transition-colors break-all min-w-0">contato@neoukunft.com.br</a>
         </div>
       </div>
     </div>
@@ -130,13 +128,13 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 
   <div class="flex flex-col gap-3 no-print">
     <a class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-primary text-on-primary rounded font-label-tag text-label-tag hover:bg-secondary transition-colors group" href="https://www.linkedin.com/in/thiago-justo" target="_blank" rel="noopener">
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+      <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
       </svg>
       LinkedIn Profile
     </a>
     <a class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-surface-container-highest text-on-surface rounded font-label-tag text-label-tag hover:bg-outline-variant transition-colors group" href="https://github.com/sxthumb" target="_blank" rel="noopener">
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+      <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
       </svg>
       GitHub Repository
@@ -150,7 +148,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
   <!-- Core Stack -->
   <div class="flex flex-col gap-4">
     <h2 class="font-section-title text-section-title text-primary uppercase tracking-widest flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+      <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
       Principais Competências
     </h2>
     <div class="flex flex-col gap-6">
@@ -200,7 +198,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
   <!-- Certifications -->
   <div class="flex flex-col gap-4">
     <h2 class="font-section-title text-section-title text-primary uppercase tracking-widest flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+      <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
       Certificações
     </h2>
     <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -215,7 +213,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
   <!-- Education -->
   <div id="formacao" class="flex flex-col gap-4">
     <h2 class="font-section-title text-section-title text-primary uppercase tracking-widest flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+      <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
       Formação Acadêmica
     </h2>
     <div class="flex flex-col gap-5">
@@ -235,7 +233,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
   <!-- Awards -->
   <div class="flex flex-col gap-4">
     <h2 class="font-section-title text-section-title text-primary uppercase tracking-widest flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+      <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
       Prêmios &amp; Publicações
     </h2>
     <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -248,7 +246,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 </aside>
 
 <!-- Main Content -->
-<main class="col-span-12 md:col-span-8 lg:col-span-9 flex flex-col gap-12 md:pl-8">
+<main class="col-span-12 md:col-span-8 lg:col-span-9 flex flex-col gap-12 md:pl-8 min-w-0">
 
   <!-- Summary -->
   <section class="flex flex-col gap-4">
@@ -288,7 +286,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <div class="absolute -left-[41px] top-6 bottom-[-40px] w-[2px] bg-outline-variant/20 hidden md:block group-last:hidden"></div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Engenheiro de Software Sênior</h3>
-          <span class="font-body-meta text-body-meta text-secondary-fixed-dim bg-secondary text-on-secondary px-3 py-1 rounded-full whitespace-nowrap">jan 2024 – mar 2026 · 2a 3m</span>
+          <span class="font-body-meta text-body-meta text-secondary-fixed-dim bg-secondary text-on-secondary px-3 py-1 rounded-full self-start md:self-auto">jan 2024 – mar 2026 · 2a 3m</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">GS2 Consulting</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -308,7 +306,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <div class="absolute -left-[41px] top-6 bottom-[-40px] w-[2px] bg-outline-variant/20 hidden md:block group-last:hidden"></div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Desenvolvedor Front-end</h3>
-          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 whitespace-nowrap">out 2022 – jan 2024 · 1a 4m</span>
+          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 self-start md:self-auto">out 2022 – jan 2024 · 1a 4m</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">Koopere</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -326,7 +324,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <div class="absolute -left-[41px] top-6 bottom-[-40px] w-[2px] bg-outline-variant/20 hidden md:block group-last:hidden"></div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Desenvolvedor Back-end</h3>
-          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 whitespace-nowrap">out 2020 – set 2022 · 2a</span>
+          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 self-start md:self-auto">out 2020 – set 2022 · 2a</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">Stone · Rio de Janeiro, Brasil</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -343,7 +341,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <div class="absolute -left-[41px] top-6 bottom-[-40px] w-[2px] bg-outline-variant/20 hidden md:block group-last:hidden"></div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Desenvolvedor Full Stack</h3>
-          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 whitespace-nowrap">mar 2017 – jul 2020 · 3a 5m</span>
+          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 self-start md:self-auto">mar 2017 – jul 2020 · 3a 5m</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">GM5 · Rio de Janeiro, Brasil</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -360,7 +358,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         <div class="absolute -left-[41px] top-6 bottom-[-40px] w-[2px] bg-outline-variant/20 hidden md:block group-last:hidden"></div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Suporte Técnico</h3>
-          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 whitespace-nowrap">out 2015 – mar 2017 · 1a 6m</span>
+          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 self-start md:self-auto">out 2015 – mar 2017 · 1a 6m</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">DM Consultoria · Rio de Janeiro e Região, Brasil</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -375,7 +373,7 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
         </div>
         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2 md:gap-0">
           <h3 class="font-role-title text-role-title text-primary text-xl">Suporte Técnico</h3>
-          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 whitespace-nowrap">mar 2011 – out 2015 · 4a 8m</span>
+          <span class="font-body-meta text-body-meta text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant/50 self-start md:self-auto">mar 2011 – out 2015 · 4a 8m</span>
         </div>
         <p class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider mb-4">Infoideias Software e Consultoria Ltda · Rio de Janeiro e Região, Brasil</p>
         <ul class="flex flex-col gap-3 font-body-main text-body-main text-on-surface-variant list-none pl-0">
@@ -392,18 +390,18 @@ tailwind.config={theme:{extend:{"colors":{"tertiary-fixed":"#89f5e7","inverse-su
 </div>
 
 <footer class="no-print w-full bg-surface-container py-section-gap border-t border-outline-variant/20">
-  <div class="max-w-7xl mx-auto px-margin-page flex flex-col md:flex-row items-center justify-between gap-gutter">
+  <div class="max-w-7xl mx-auto px-4 md:px-margin-page flex flex-col md:flex-row items-center justify-between gap-gutter">
     <div class="text-body-meta text-on-surface-variant">© 2026 Thiago Justo</div>
     <div class="flex items-center gap-gutter">
       <a href="mailto:contato@neoukunft.com.br" class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" aria-label="E-mail">mail</a>
       <a href="https://www.linkedin.com/in/thiago-justo" target="_blank" rel="noopener" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="LinkedIn">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
         </svg>
       </a>
 
       <a href="https://github.com/sxthumb" target="_blank" rel="noopener" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="GitHub">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
         </svg>
       </a>
